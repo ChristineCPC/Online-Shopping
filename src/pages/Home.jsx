@@ -1,67 +1,43 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import "./Home.css";
 import Product_Card from "./Product_Card";
+import axios from "axios";
 
 function Home() {
-    const products = [
-        {
-            id: 1,
-            title: "Wireless Mouse",
-            price: 29.99,
-            img: "https://via.placeholder.com/200x150?text=Mouse"
-        },
-        {
-            id: 2,
-            title: "Bluetooth Headphones",
-            price: 59.99,
-            img: "https://via.placeholder.com/200x150?text=Headphones"
-        },
-        {
-            id: 3,
-            title: "Laptop Stand",
-            price: 22.49,
-            img: "https://via.placeholder.com/200x150?text=Stand"
-        },
-        {
-            id: 4,
-            title: "Mechanical Keyboard",
-            price: 89.99,
-            img: "https://via.placeholder.com/200x150?text=Keyboard"
-        },
-        {
-            id: 5,
-            title: "Smart Watch",
-            price: 129.99,
-            img: "https://via.placeholder.com/200x150?text=Smart+Watch"
-        },
-        {
-            id: 6,
-            title: "External Hard Drive",
-            price: 74.99,
-            img: "https://via.placeholder.com/200x150?text=Hard+Drive"
-        }
-    ];
+    const [product, setProduct] = useState([]);
+    const[loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        axios.get("http://localhost:8000/product")
+            .then(response => {
+                setProduct(response.data);
+                setLoading(false);
+            })
+            .catch (error => {
+                console.error("Error fetching products:", error);
+                setLoading(false);
+            });
+    }, []);
+
+    
+    if (loading) {
+        return <div className="loading">Loading products...</div>;
+    }
 
     return (
         <div className="home">
-            <div className="home-hero">
-                <img
-                    className="home-hero-image"
-                    src="https://m.media-amazon.com/images/I/61gokz+1KqL._SX3000_.jpg"
-                    alt="Banner"
-                />
-            </div>
-
-            <h2 className="home-section-title">Recommended Products</h2>
-            <div className="home-product-grid">
-                {products.map((item) => (
-                    <Product_Card
-                        key={item.id}
-                        title={item.title}
-                        price={item.price}
-                        img={item.img}
-                    />
-                ))}
+            <h1>Featured Products</h1>
+            <div className="product-grid">
+                {product.map((product) => (
+                    <Product_Card 
+                        key = {product.Product_ID}
+                        id = {product.Product_ID}
+                        name = {product.Name}
+                        price = {product.Price}
+                        image_URL = {product.Image_URL}
+                    /> 
+            ))}
             </div>
         </div>
     );

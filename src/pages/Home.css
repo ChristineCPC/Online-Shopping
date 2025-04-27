@@ -14,6 +14,7 @@
 .home-section-title {
     font-size: 1.5rem;
     margin: 20px 0 10px 10px;
+    color: black;
 }
 
 .home-product-grid {
@@ -22,3 +23,8 @@
     gap: 20px;
     padding: 0 10px;
 }
+
+.home, .product-list, .product-card {
+    background-color: lightgray;
+  }
+  
