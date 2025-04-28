@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from database import get_connection
 from routers import product
 from fastapi.middleware.cors import CORSMiddleware
+from routers import login
+
+
 
 app = FastAPI()
 
@@ -14,6 +17,7 @@ app.add_middleware(
 )
 
 app.include_router(product.router)
+app.include_router(login.router)
 
 @app.get("/test-db")
 def test_db():

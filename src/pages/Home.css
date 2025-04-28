@@ -19,12 +19,12 @@
 
 .home-product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
     padding: 0 10px;
 }
 
 .home, .product-list, .product-card {
     background-color: lightgray;
-  }
-  
+}
+

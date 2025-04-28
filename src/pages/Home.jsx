@@ -28,7 +28,7 @@ function Home() {
     return (
         <div className="home">
             <h1>Featured Products</h1>
-            <div className="product-grid">
+            <div className="home-product-grid">
                 {product.map((product) => (
                     <Product_Card 
                         key = {product.Product_ID}

@@ -4,7 +4,8 @@ import "./Product_Page.css";
 import axios from "axios";
 
 
-function Product_Page() {
+function Product_Page() 
+{
   const { id } = useParams();
   const [product, setProduct] = useState(null);
 
