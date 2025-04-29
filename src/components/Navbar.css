@@ -37,6 +37,7 @@
     border: none;
     border-radius: 4px 0 0 4px;
     background-color: white;
+    color: black;
   }
   
   .navbar-search button {
@@ -53,7 +54,7 @@
     gap: 20px;
   }
   
-  .nav-option {
+  .nav-option .line-one{
     display: flex;
     flex-direction: column;
     color: white;
@@ -63,6 +64,7 @@
   .nav-option .line-two {
     font-weight: bold;
     font-size: 14px;
+    color: white;
   }
   
   .nav-cart {
@@ -127,4 +129,13 @@
   .account-dropdown a:hover {
     background-color: white;
   }
-  
+
+  .signout-button {
+    background: none;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+  }

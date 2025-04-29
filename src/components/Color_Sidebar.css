@@ -1,0 +1,36 @@
+.color-sidebar {
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+    color: black;
+  }
+  
+  .color-sidebar h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .color-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .color-button {
+    padding: 0.5rem 1rem;
+    background-color: #f5f5f5;
+    border: 1px solid #999;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: left;
+    color: black;
+  }
+  
+  .color-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .color-button.selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+  }
+  
