@@ -1,0 +1,35 @@
+.checkout-container {
+    padding: 20px;
+    color: black;
+  }
+  
+  .checkout-content {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .checkout-summary,
+  .checkout-form {
+    flex: 1;
+  }
+  
+  .checkout-item {
+    margin-bottom: 10px;
+  }
+  
+  .checkout-total {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px 15px;
+  }
+  

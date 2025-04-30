@@ -1,0 +1,24 @@
+.order-history {
+    padding: 20px;
+    color: black;
+  }
+  .order-list {
+    list-style: none;
+    padding: 0;
+  }
+  .order-item {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .order-item div {
+    margin: 2px 0;
+  }
+  .order-item a {
+    color: #007185;
+    text-decoration: none;
+  }
+  .order-item a:hover {
+    text-decoration: underline;
+  }
+  
